@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 6px 0 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-dot-wrap {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #555;
+            display: inline-block;
+        }
+
+        .stock-badge {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-weight: 500;
+        }
+
+        .stock-badge.in-stock {
+            background: #1a3a1a;
+            color: #4ade80;
+        }
+
+        .stock-badge.low-stock {
+            background: #3a2a00;
+            color: #facc15;
+        }
+
+        .stock-badge.out-of-stock {
+            background: #3a1a1a;
+            color: #f87171;
+        }
+
+        .add-btn:disabled {
+            background: #333 !important;
+            color: #666 !important;
+            cursor: not-allowed !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-bar" id="scrollBar"></div>
+
+    <header>
+        <div class="logo">MAGIC STORE</div>
+        <nav>
+            <ul>
+                <li><a href="#laptop-section">LAPTOP BAG</a></li>
+                <li><a href="#tote-section">TUT BAG</a></li>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#contact-us">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="icons" id="cart-icon-btn">
+            <img src="cart.png" alt="CART" class="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="poster">
+        <img src="web.jpeg" alt="Main Poster">
+        <br>
+        <button class="shop-now-btn" onclick="location.href='#tote-section'">Shop Now</button>
+    </section>
+
+    <section id="tote-section">
+        <h2 class="category-title">TUT BAGS</h2>
+        <div class="product-grid">
+
+            <div class="product-card" data-stock="8">
+                <div class="img-box"><img src="bag1.png" alt="tut bag"></div>
+                <h2 class="p-name">Twinkling Watermelon</h2>
+                <p class="p-price">200 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-stock="5">
+                <div class="img-box"><img src="bag2.png" alt="tut bag"></div>
+                <h2 class="p-name">Extraordinary</h2>
+                <p class="p-price">200 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-stock="3">
+                <div class="img-box"><img src="bag3.png" alt="tut bag"></div>
+                <h2 class="p-name">Galaxy Art</h2>
+                <p class="p-price">200 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-stock="0">
+                <div class="img-box"><img src="bag4.png" alt="tut bag"></div>
+                <h2 class="p-name">College Girl</h2>
+                <p class="p-price">200 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-stock="10">
+                <div class="img-box"><img src="bag5.png" alt="tut bag"></div>
+                <h2 class="p-name">Skuna</h2>
+                <p class="p-price">200 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-banner" id="laptop-section">
+        <img src="web2.png" alt="Laptop Bags Banner">
+    </div>
+
+    <section>
+        <h2 class="category-title">LAPTOP BAGS</h2>
+        <div class="product-grid">
+
+            <div class="product-card" data-stock="4">
+                <div class="img-box"><img src="bag6.png" alt="laptop bag"></div>
+                <h2 class="p-name">Classic Tech</h2>
+                <p class="p-price">350 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-stock="2">
+                <div class="img-box"><img src="bag7.png" alt="laptop bag"></div>
+                <h2 class="p-name">Toothless Edition</h2>
+                <p class="p-price">350 EGP</p>
+                <div class="product-meta">
+                    <div class="color-dot-wrap">
+                        <span class="color-dot"></span> White
+                    </div>
+                    <span class="stock-badge"></span>
+                </div>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Shopping Cart 🛍️</h2>
+            <div id="cart-items-list">
+                <p style="text-align:center; color:#666;">Cart is empty</p>
+            </div>
+
+            <div class="checkout-form">
+                <input type="text" id="cust-name" placeholder="Full Name" required>
+                <input type="text" id="cust-phone" placeholder="Phone Number" required>
+                <textarea id="cust-address" placeholder="Detailed Address (City, Street...)" rows="3" required></textarea>
+
+                <div class="delivery-info">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                        <span>Subtotal:</span><span><span id="subtotal-price">0</span> EGP</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                        <span>Shipping:</span><span>50 EGP</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; font-weight:bold; border-top:1px solid #333; padding-top:10px; font-size:1.1rem;">
+                        <span>Total:</span><span><span id="final-total">0</span> EGP</span>
+                    </div>
+                </div>
+                <button id="whatsapp-order-btn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-me" id="contact-us">
+        <h2 class="category-title">CONTACT ME</h2>
+        <a href="https://www.instagram.com/magic_of_art__store" target="_blank" class="instagram-btn">
+            Follow @magic_of_art__store
+        </a>
+    </section>
+
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+        .cart-item-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            background: #2a2a2a;
+            flex-shrink: 0;
+        }
+        .cart-item-info { flex: 1; }
+        .cart-item-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; color: #fff; }
+        .cart-item-price { font-size: 13px; color: #aaa; }
+        .cart-item-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .qty-btn {
+            width: 28px; height: 28px;
+            border-radius: 7px;
+            border: 1px solid #333;
+            background: #2a2a2a;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.15s;
+        }
+        .qty-btn:hover { background: #3a3a3a; }
+        .qty-val { font-size: 14px; font-weight: 600; min-width: 18px; text-align: center; color: #fff; }
+        .remove-item-btn { background: none; border: none; color: #ff4d4d; font-size: 18px; cursor: pointer; padding: 0 4px; }
+    </style>
+
+    <script>
+        let cart = [];
+
+        /* ===== Stock Setup ===== */
+        /* غيري الأرقام دي زي ما تحبي */
+        const stockData = {};
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            const name  = card.querySelector('.p-name').innerText;
+            const stock = parseInt(card.dataset.stock);
+            stockData[name] = stock;
+
+            const badge = card.querySelector('.stock-badge');
+            const btn   = card.querySelector('.add-btn');
+
+            if (stock === 0) {
+                badge.textContent = 'Out of Stock';
+                badge.className = 'stock-badge out-of-stock';
+                btn.disabled = true;
+                btn.textContent = 'Out of Stock';
+            } else if (stock <= 3) {
+                badge.textContent = `Only ${stock} left!`;
+                badge.className = 'stock-badge low-stock';
+            } else {
+                badge.textContent = `${stock} in stock`;
+                badge.className = 'stock-badge in-stock';
+            }
+        });
+
+        /* ===== Cart Logic ===== */
+        const cartCountDisplay = document.getElementById('cart-count');
+        const cartModal        = document.getElementById('cart-modal');
+        const itemsList        = document.getElementById('cart-items-list');
+
+        document.getElementById('cart-icon-btn').onclick = () => cartModal.style.display = 'block';
+        document.querySelector('.close-cart').onclick    = () => cartModal.style.display = 'none';
+        window.onclick = e => { if (e.target == cartModal) cartModal.style.display = 'none'; };
+
+        document.querySelectorAll('.add-btn').forEach(btn => {
+            btn.onclick = function () {
+                if (this.disabled) return;
+
+                const card  = this.closest('.product-card');
+                const name  = card.querySelector('.p-name').innerText;
+                const price = parseInt(card.querySelector('.p-price').innerText);
+                const img   = card.querySelector('.img-box img').src;
+
+                /* تحقق من الستوك */
+                const inCartQty = (cart.find(i => i.name === name) || {}).qty || 0;
+                if (inCartQty >= stockData[name]) {
+                    alert('عدد القطع المتاحة نفد!');
+                    return;
+                }
+
+                const existing = cart.find(i => i.name === name);
+                if (existing) {
+                    existing.qty++;
+                } else {
+                    cart.push({ name, price, img, qty: 1 });
+                }
+
+                updateCart();
+                this.innerText = 'Added ✓';
+                this.style.background = '#22c55e';
+                setTimeout(() => { this.innerText = 'Add to Cart'; this.style.background = '#7c3aed'; }, 1000);
+            };
+        });
+
+        function updateCart() {
+            const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+            cartCountDisplay.innerText = totalItems;
+            itemsList.innerHTML = '';
+
+            if (cart.length === 0) {
+                itemsList.innerHTML = '<p style="text-align:center;color:#666;">Cart is empty</p>';
+                document.getElementById('subtotal-price').innerText = 0;
+                document.getElementById('final-total').innerText    = 0;
+                return;
+            }
+
+            let subtotal = 0;
+            cart.forEach((item, index) => {
+                subtotal += item.price * item.qty;
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img class="cart-item-img" src="${item.img}" alt="${item.name}" onerror="this.style.visibility='hidden'">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">${item.price * item.qty} EGP</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="qty-btn" onclick="changeQty(${index}, -1)">−</button>
+                        <span class="qty-val">${item.qty}</span>
+                        <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                        <button class="remove-item-btn" onclick="removeFromCart(${index})">×</button>
+                    </div>`;
+                itemsList.appendChild(div);
+            });
+
+            document.getElementById('subtotal-price').innerText = subtotal;
+            document.getElementById('final-total').innerText    = subtotal + 50;
+        }
+
+        window.changeQty = (index, delta) => {
+            const item = cart[index];
+            const newQty = item.qty + delta;
+            if (newQty < 1) return;
+            if (newQty > stockData[item.name]) {
+                alert(`الحد الأقصى المتاح ${stockData[item.name]} قطعة`);
+                return;
+            }
+            item.qty = newQty;
+            updateCart();
+        };
+
+        window.removeFromCart = index => { cart.splice(index, 1); updateCart(); };
+
+        /* ===== WhatsApp Order ===== */
+        document.getElementById('whatsapp-order-btn').onclick = function () {
+            const name  = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const addr  = document.getElementById('cust-address').value;
+            const total = document.getElementById('final-total').innerText;
+
+            if (!name || !phone || !addr || cart.length === 0) {
+                alert('يرجى ملء البيانات وإضافة منتجات للشنطة!');
+                return;
+            }
+
+            const myNumber = '201004262710';
+            let msg = `*طلب جديد - Magic Store*%0A%0A`;
+            msg += `*الاسم:* ${name}%0A*الموبايل:* ${phone}%0A*العنوان:* ${addr}%0A%0A*المنتجات:*%0A`;
+            cart.forEach((item, i) => msg += `${i+1}. ${item.name} x${item.qty} (${item.price * item.qty} EGP)%0A`);
+            msg += `%0A*التوصيل:* 50 EGP%0A*الإجمالي:* ${total} EGP`;
+
+            window.open(`https://wa.me/${myNumber}?text=${msg}`);
+        };
+
+        /* ===== Scroll Bar ===== */
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height    = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('scrollBar').style.width = (winScroll / height * 100) + '%';
+        };
+    </script>
+
+</body>
+</html>
